@@ -1,0 +1,37 @@
+unique_name: Northwind_Sales_Model
+object_type: model
+label: Northwind Sales
+metrics: []
+relationships:
+  - unique_name: orders_customerid_to_DimCustomers_customername
+    from:
+      dataset: orders
+      join_columns:
+        - customerid
+    to:
+      dimension: DimCustomers
+      level: customername
+  - unique_name: orders_productid_to_Product_productname
+    from:
+      dataset: orders
+      join_columns:
+        - productid
+    to:
+      dimension: Product
+      level: productname
+  - unique_name: orders_employeeid_to_employee_employee_name
+    from:
+      dataset: orders
+      join_columns:
+        - employeeid
+    to:
+      dimension: employee
+      level: employee_name
+  - unique_name: orders_rowid_to_Shipper_shippername
+    from:
+      dataset: orders
+      join_columns:
+        - rowid
+    to:
+      dimension: Shipper
+      level: shippername
