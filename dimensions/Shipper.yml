@@ -1,0 +1,44 @@
+unique_name: Shipper
+object_type: dimension
+label: Shipper
+hierarchies:
+  - unique_name: Shipper Hierarchy
+    label: Shipper Hierarchy
+    levels:
+      - unique_name: shippedcountry
+      - unique_name: shippedcity
+      - unique_name: shippername
+level_attributes:
+  - unique_name: shippedcountry
+    label: shippedcountry
+    contains_unique_names: false
+    dataset: orders
+    is_unique_key: false
+    key_columns:
+      - shippedcountry
+    name_column: shippedcountry
+  - unique_name: shippedcity
+    label: shipped city
+    contains_unique_names: false
+    dataset: orders
+    is_unique_key: false
+    key_columns:
+      - shippedcity
+    name_column: shippedcity
+  - unique_name: shippername
+    label: shipper name
+    contains_unique_names: false
+    dataset: orders
+    is_unique_key: false
+    key_columns:
+      - productid
+    name_column: shippername
+  - unique_name: orders_empty_attr
+    label: orders_empty_attr
+    contains_unique_names: false
+    dataset: orders
+    is_hidden: true
+    is_unique_key: false
+    key_columns: []
+    name_column: ''
+type: standard

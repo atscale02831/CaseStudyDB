@@ -1,0 +1,71 @@
+unique_name: Product
+object_type: dimension
+label: Product
+hierarchies:
+  - unique_name: Product Hierarchy
+    label: Product Hierarchy
+    levels:
+      - unique_name: suppliercountry
+      - unique_name: suppliercity
+      - unique_name: suppliername
+      - unique_name: productname
+      - unique_name: productcategory
+      - unique_name: suppliertype
+level_attributes:
+  - unique_name: suppliercountry
+    label: supplier country
+    contains_unique_names: false
+    dataset: products
+    is_unique_key: false
+    key_columns:
+      - suppliercountry
+    name_column: suppliercountry
+  - unique_name: suppliercity
+    label: supplier city
+    contains_unique_names: false
+    dataset: products
+    is_unique_key: false
+    key_columns:
+      - suppliercity
+    name_column: suppliercity
+  - unique_name: suppliertype
+    label: supplier type
+    contains_unique_names: false
+    dataset: products
+    is_unique_key: false
+    key_columns:
+      - suppliertype
+    name_column: suppliertype
+  - unique_name: suppliername
+    label: supplier name
+    contains_unique_names: false
+    dataset: products
+    is_unique_key: false
+    key_columns:
+      - suppliername
+    name_column: suppliername
+  - unique_name: productname
+    label: product name
+    contains_unique_names: false
+    dataset: products
+    is_unique_key: false
+    key_columns:
+      - productid
+    name_column: productname
+  - unique_name: productcategory
+    label: product category
+    contains_unique_names: false
+    dataset: products
+    is_unique_key: false
+    key_columns:
+      - productcategory
+    name_column: productcategory
+  - unique_name: products_empty_attr
+    label: products_empty_attr
+    contains_unique_names: false
+    dataset: products
+    is_hidden: true
+    is_unique_key: false
+    key_columns: []
+    name_column: ''
+type: standard
